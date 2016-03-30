@@ -1,0 +1,43 @@
+html{height: 100%;width: 100%}
+body{height: 100%;width: 100%;font-family:light Roboto Helvetica;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);background: #fff;color:#3e3e3e;font-size: 12px}
+body,div,a,i,p,span,ul,li,em,img,button{margin:0;padding:0;}
+ul,li{list-style: none}
+i{font-style: normal;}
+a{text-decoration: none;}
+img{max-width: 100%;height: auto;}
+.hide{display: none}
+.design_box{background: url(../img/bg.jpg) no-repeat 0 0;width:100%;height:auto;background-size:cover; padding: 35% 0 5%;min-height: 300px;color: #fff;}
+.swiper-container {padding-bottom: 10%;}
+.icon{background: url(../img/icon.png) no-repeat;width: 48px;display: inline-block;vertical-align: top;background-size: 192px auto;padding-top: 55px;text-align: center;color: #c2c2c2;}
+.main{padding:16px;font-size: 14px;}
+.like{background-position: 0 0; }
+.like.active{color:#ff8942;background-position: -48px 0; }
+.dislike{background-position: -96px 0;}
+.dislike.active{color:#558092;background-position: -144px 0;}
+.like_box{text-align: center;padding-top: 10%;border-bottom: 1px solid #f3f3f3;padding-bottom: 12px;}
+.like_box p {margin:0 15%}
+.form_cont{padding-top: 15px;}
+.form_text{font-size: 16px;margin-bottom:10px;}
+.form_list{color:#8e8e8e;}
+.other_text{margin-top: 15px;color:#8e8e8e;}
+.textarea{border:1px solid #ededed; width: 100%;}
+.form_list label{float: left;margin-right: 20px}
+.form_list li{margin-top: 15px;}
+.form_list li.checked{color:#3e3e3e;}
+/* radio start */
+.regular-radio {display: none;}
+.regular-radio + label {-webkit-appearance: none; background-color: #fafafa; border: 1px solid #cacece;box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: 9px;border-radius: 50px; display: inline-block; position: relative;}
+.checked label:after{ content: ' '; width: 12px; height: 12px;border-radius: 50px;position: absolute;top: 3px;background: #4caf50;box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);text-shadow: 0px;left: 3px;font-size: 32px;}
+.regular-radio:checked + label { background-color: #fff; color: #4caf50; border: 1px solid #4caf50;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);}
+.regular-radio + label:active, .regular-radio:checked + label:active {box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);}
+.big-radio + label { padding: 16px; }
+.big-radio:checked + label:after { width: 24px; height: 24px; left: 4px; top: 4px;}
+/* radio end*/
+.textarea{margin-top:10px;}
+.sub_btn{background: #c2c2c2;border-radius: 2px;box-shadow: 1px 1px 3px #afafaf;border:0;padding:10px 15px;color:#fff;text-align: center;width: 90px;margin:15px auto 10px;display: block;}
+.sub_btn.active{background: #4cb050;}
+ @media screen and (max-width: 320px) {
+   .design_box{min-height:240px;}
+  }

@@ -1,0 +1,64 @@
+
+html{height: 100%;}
+body{height: 100%;font-family:Heiti SC;-webkit-tap-highlight-color: rgba(0, 0, 0, 0);background: #f0f0f0;color:#838383;font-size: 12px}
+body,div,a,i,p,span,ul,li,em,h1,img,button,video,audio,header,nav,section,h4,dl,dt,dd{margin:0;padding:0;}
+ul,li{list-style: none}
+i{font-style: normal;}
+a{text-decoration: none;color:#838383}
+.container{padding-bottom: 20px}
+.clearfix:after {content: " ";display: block;clear: both;height: 0;}
+.icon{background: url(../img/2x.png) no-repeat;width: 25px;height:25px;display: inline-block;vertical-align: top;margin-right:10px;margin-left: 15px;background-size: 400px auto;}
+.loading {display: none;position: absolute; top: 50%;margin-top: -16px; left: 50%; z-index: 9;background: url(../img/loading.gif) no-repeat 0 center; -webkit-background-size:25px auto;margin-left: -13px;width: 32px;height: 32px;}
+.backtop {display: block; position: absolute;bottom: 10%;right: 10px;background: url(../img/gototop.png) no-repeat 0 0; background-size: 100% auto;width: 40px;height: 40px;visibility: hidden;opacity: 0; -webkit-transition: all 0.3s;-moz-transition: all 0.3s;transition: all 0.3s;z-index: 999999;}
+.backtop.backtop_visible {visibility: visible;opacity: 1;}
+.wrap {padding: 0 70px;}
+.weather {padding-left:13px;position: relative;min-height: 73px;}
+.weather a{display: block;padding: 15px 0;min-height: 43px;}
+.weather span,.weather img{display: inline-block;vertical-align: middle}
+.weather_temp{font-size: 38px;font-weight: bold}
+.weather_img{margin-left: -20px;width: 40px;}
+.weather_city{padding-left: 10px;line-height: 15px;}
+.nav,.main{background: #fff;border-radius:5px;overflow: hidden}
+.nav ul{overflow: hidden;margin-top: -1px;margin-left: -1px;}
+.nav li {float:left;border-top:1px solid #f0f0f0;border-left:1px solid #f0f0f0;width: 16.5%;}
+.nav li a{display: block;padding:10px 0;line-height: 22px;}
+.main{padding:0 59px 40px 0;margin-top: 15px;}
+.cate{padding-top: 20px;}
+.tit {padding-left: 35px; white-space: nowrap;line-height: 25px;}
+.cate_list{padding-left: 55px; }
+.cate_list i{color:#999;font-size: 11px;}
+.cate_list a{display: inline-block;width: 14.9%;text-align: center;margin-top: 15px;}
+@media all and (orientation : portrait){ 
+    body{font-size: 15px;color:#666;}
+    a{color:#666;}
+    .icon{background: url(../img/por2x.png) no-repeat;width: 25px;height:25px;display: inline-block;vertical-align: top;margin-right:10px;margin-left: 15px;background-size: 400px auto;}
+    .nav li {width: 24.8%;}
+    .nav li a {padding: 15px 0;}
+    .icon{ margin-right: 20px;margin-left: 35px;}
+    .cate_list {padding-left: 40px}
+    .cate_list a {margin-top: 16px}
+    .main {padding: 0 40px 42px 0;margin-top: 20px;}
+    .cate {padding-top: 28px;}
+    .weather {padding-left: 30px;min-height: 83px;}
+    .weather a{padding: 20px 0;}
+    .weather_city{padding-left: 10px;line-height: 20px;}
+} 
+.news{background-position: 0 0;}
+.baidu{background-position: -60px 0;}
+.jd{background-position: -120px 0;}
+.sousou{background-position: -180px 0;}
+.dangdang{background-position: -240px 0;}
+.sina{background-position: -300px 0;}
+.taobao{background-position: -180px -49px;}
+.meituan{background-position: -240px -49px;}
+.meilishuo{background-position: -120px -49px;}
+.youku{background-position: -60px -49px;}
+.weipinhui{background-position: 0 -49px;}
+.xiecheng{background-position: -360px 0;}
+
+.tit_news{background-position: 0 -98px;}
+.tit_social{background-position: -63px -98px;}
+.tit_live{background-position: -126px -98px;}
+.tit_shopping{background-position: -190px -98px;}
+.tit_video{background-position: -253px -98px;}
+.tit_novel{background-position: -316px -98px;}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WELCOME TO Dolphin New Home Design Survey</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,user-scalable=no" />
+    <style type="text/css">
+        .loader_box{
+            width: 50%;  
+            margin: auto;  
+            position: absolute;  
+            top: 40%; left: 50%;  
+            -webkit-transform: translate(-50%,-50%);  
+            -ms-transform: translate(-50%,-50%);  
+            transform: translate(-50%,-50%);  
+         }
+        .loader {
+          font-size: 90px;
+          text-indent: -9999em;
+          overflow: hidden;
+          width: 1em;
+          height: 1em;
+          border-radius: 50%;
+          margin: 0.8em auto;
+          position: relative;
+          -webkit-animation: load6 1.7s infinite ease;
+          animation: load6 1.7s infinite ease;
+
+
+        }
+        @-webkit-keyframes load6 {
+          0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            box-shadow: -0.11em -0.83em 0 -0.4em #fff, -0.11em -0.83em 0 -0.42em #fff, -0.11em -0.83em 0 -0.44em #fff, -0.11em -0.83em 0 -0.46em #fff, -0.11em -0.83em 0 -0.477em #fff;
+          }
+          5%,
+          95% {
+            box-shadow: -0.11em -0.83em 0 -0.4em #fff, -0.11em -0.83em 0 -0.42em #fff, -0.11em -0.83em 0 -0.44em #fff, -0.11em -0.83em 0 -0.46em #fff, -0.11em -0.83em 0 -0.477em #fff;
+          }
+          30% {
+            box-shadow: -0.11em -0.83em 0 -0.4em #fff, -0.51em -0.66em 0 -0.42em #fff, -0.75em -0.36em 0 -0.44em #fff, -0.83em -0.03em 0 -0.46em #fff, -0.81em 0.21em 0 -0.477em #fff;
+          }
+          55% {
+            box-shadow: -0.11em -0.83em 0 -0.4em #fff, -0.29em -0.78em 0 -0.42em #fff, -0.43em -0.72em 0 -0.44em #fff, -0.52em -0.65em 0 -0.46em #fff, -0.57em -0.61em 0 -0.477em #fff;
+          }
+          100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+            box-shadow: -0.11em -0.83em 0 -0.4em #fff, -0.11em -0.83em 0 -0.42em #fff, -0.11em -0.83em 0 -0.44em #fff, -0.11em -0.83em 0 -0.46em #fff, -0.11em -0.83em 0 -0.477em #fff;
+          }
+        }
+        @keyframes load6 {
+          0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+            box-shadow: -0.11em -0.83em 0 -0.4em #fff, -0.11em -0.83em 0 -0.42em #fff, -0.11em -0.83em 0 -0.44em #fff, -0.11em -0.83em 0 -0.46em #fff, -0.11em -0.83em 0 -0.477em #fff;
+          }
+          5%,
+          95% {
+            box-shadow: -0.11em -0.83em 0 -0.4em #fff, -0.11em -0.83em 0 -0.42em #fff, -0.11em -0.83em 0 -0.44em #fff, -0.11em -0.83em 0 -0.46em #fff, -0.11em -0.83em 0 -0.477em #fff;
+          }
+          30% {
+            box-shadow: -0.11em -0.83em 0 -0.4em #fff, -0.51em -0.66em 0 -0.42em #fff, -0.75em -0.36em 0 -0.44em #fff, -0.83em -0.03em 0 -0.46em #fff, -0.81em 0.21em 0 -0.477em #fff;
+          }
+          55% {
+            box-shadow: -0.11em -0.83em 0 -0.4em #fff, -0.29em -0.78em 0 -0.42em #fff, -0.43em -0.72em 0 -0.44em #fff, -0.52em -0.65em 0 -0.46em #fff, -0.57em -0.61em 0 -0.477em #fff;
+          }
+          100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+            box-shadow: -0.11em -0.83em 0 -0.4em #fff, -0.11em -0.83em 0 -0.42em #fff, -0.11em -0.83em 0 -0.44em #fff, -0.11em -0.83em 0 -0.46em #fff, -0.11em -0.83em 0 -0.477em #fff;
+          }
+        }
+    </style>
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <link type="text/css" rel="stylesheet" href="css/swiper.min.css"/>
+    <link type="text/css" rel="stylesheet" href="css/rebox.css"/>
+</head>
+<body>
+<div class="loader_box" id="loader_box">
+  <div class="loader" id="loader">Loading...</div>
+</div>
+<div class="wrap" id="wrap">
+    <div class="design_box">
+        <div id="Swiper_box" class="hide">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><a class="swiper_link" href="img/1.png"><img src="img/1.png" alt=""><span>Homepage without content cards</span></a></div>
+                    <div class="swiper-slide"><a class="swiper_link" href="img/2.png"><img src="img/2.png" alt=""><span>Homepage with content cards</span></a></div>
+                    <div class="swiper-slide"><a class="swiper_link" href="img/3.png"><img src="img/3.png" alt=""><span>The card with latest breaking news</span></a></div>
+                    <div class="swiper-slide"><a class="swiper_link" href="img/4.gif"><img src="img/4.png" alt=""><span>Demo of the New Home Design</span></a></div>
+      
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    <div id="main" class="main">
+        <form id="feed_back_form" class="hide">
+            <p>Our designer Will has come up with a superior design for Dolphin’s homepage. We want to know what you think about it.</p>
+            <div class="like_box" id="tab_tit">
+                <p class="icon like" id="like">LIKE</p>
+                <p class="icon dislike" id="dislike">DISLIKE</p>
+                <input type="text" name="islike" id="islike" class="hide"/>
+            </div>
+            <div id="tab_cont" class="hide">
+                <div class="form_cont" id="like_cont">
+                    <p class="form_text">Thank you. Will is glad you like the new design. You like it because: </p>
+                    <ul class="form_list">
+                        <li>
+                            <input type="radio" id="radio1" name="point" class="regular-radio" value="1"/><label for="radio-1-1"></label>The new user interface looks attractive.
+                        </li>
+                        <li>
+                            <input type="radio" id="radio2" name="point" class="regular-radio" value="2" /><label for="radio2"></label>Adding latest breaking news to homepage is a great idea!
+                        </li>
+                        <li>
+                             <input type="radio" id="radio3" name="point" class="regular-radio" value="3" /><label for="radio3"></label>Speed dial layout looks better than before.
+                        </li>
+                        <li>
+                            <input type="radio" id="radio4" name="point" class="regular-radio" value="4" /><label for="radio4"></label>I like the animation when sliding up and down
+                        </li>
+                    </ul>
+                    <p class="other_text">Other:</p>
+                    <textarea width="100%" id="other" class="textarea"></textarea>
+                </div>
+                <div class="form_cont" id="dislike_cont">
+                    <p class="form_text">Thank you. We want to know the reason(s) that you dislike it.</p>
+                    <ul class="form_list">
+                        <li>
+                            <input type="radio" id="rad1" name="dispoint" class="regular-radio" value="1"/><label for="rad1"></label>I don't like the dark tab bar.
+                        </li>
+                        <li>
+                            <input type="radio" id="rad2" name="dispoint" class="regular-radio" value="2" /><label for="rad2"></label>I don’t want to swipe left/right to see all the speed dials.
+                        </li>
+                        <li>
+                             <input type="radio" id="rad3" name="dispoint" class="regular-radio" value="3" /><label for="rad3"></label>I don’t mind seeing contents on my homepage. But I don’t need news.
+                        </li>
+                        <li>
+                            <input type="radio" id="rad4" name="dispoint" class="regular-radio" value="4" /><label for="rad4"></label>I don’t want to see any content cards on my homepage.
+                        </li>
+                    </ul>
+                     <p class="other_text">Other:</p>
+                    <textarea width="100%" id="disother" class="textarea"></textarea>
+                </div>
+                <button class="sub_btn" disabled="disabled">SUBMIT</button>
+
+            </div>
+        </form>
+        <p id="endtxt" class="endtxt hide">Your feedback has been successfully submitted! Thank you.</p>
+    </div>    
+</div>
+<script data-main="js/index.js" src="js/require.js"></script>
+<style type="text/css">
+    .swiper-container-horizontal>.swiper-pagination {bottom: 0;}
+    .swiper-pagination-bullet {background: #fff;opacity: .5;}
+    .swiper-pagination-bullet-active {opacity: 1;background: #fff;}
+    .swiper_link{color:#fff;}
+    .swiper_link span{text-align: center;display: inline-block;}
+    .swiper_link:active{opacity: 0.8}
+</style>
+</body>
+</html>

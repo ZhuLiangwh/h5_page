@@ -1,0 +1,166 @@
+<html>
+<head>
+    <meta http-equiv='content-type' content='text/html;charset=UTF-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="./normalize.css">
+    <link rel="stylesheet" href="./swiper.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>海豚2015运动会, 投出你心中最牛战队!</title>
+</head>
+
+<body>
+    <!-- Loading -->
+    <div class="mod_loading" id="loading">
+        <div class="content">
+            <div class="loader">Loading...</div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!-- 音乐播放 -->
+    <div class="icon_sound off bgsong"><i></i></div>
+
+    <div class="swiper-container">
+        <div class="hidden">
+            <img src="./images/thumb.jpg">
+        </div>
+        <div class="swiper-wrapper">
+            <div class="swiper-slide swiper-lazy" id="slide1" data-background="./images/slide1-bg.jpg">
+                <div class="slider" id="slider1"></div>
+            </div>
+
+            <div class="swiper-slide swiper-lazy" id="slide2" data-background="./images/slide2-bg.jpg">
+                <div class="slider" id="slider2"></div>
+            </div>
+
+            <div class="swiper-slide swiper-lazy" id="slide3" data-background="./images/slide3-bg.jpg">
+                <div class="slider" id="slider3"></div>
+            </div>
+
+            <div class="swiper-slide swiper-lazy" id="slide4" data-background="./images/slide4-bg.jpg">
+                <div class="slider" id="slider4"></div>
+            </div>
+
+            <div class="swiper-slide swiper-lazy" id="slide5" data-background="./images/slide5-bg.jpg">
+                <div class="slider" id="slider5"></div>
+            </div>
+
+            <div class="swiper-slide swiper-lazy" id="slide6" data-background="./images/slide6-bg.jpg">
+                <div class="placeholder"></div>
+                <form action="./vote.php" method="post">
+                    <div class="vote-form">
+                        <div class="team-button">
+                            <div class="team swiper-lazy" id="team1" data-background="./images/team1.png"></div>
+                            <div class="vote" id="tc1">
+                                <span><input id="team-bg" type="radio" name="v" value="1" /></span>
+                                <span class="team-name">北京队</span>
+                            </div>
+                        </div>
+                        <div class="team-button">
+                            <div class="team swiper-lazy" id="team2" data-background="./images/team2.png"></div>
+                            <div class="vote" id="tc2">
+                                <span><input id="team-cd" type="radio" name="v" value="2" /></span>
+                                <span class="team-name">成都队</span>
+                            </div>
+                        </div>
+                        <div class="team-button">
+                            <div class="team swiper-lazy" id="team3" data-background="./images/team3.png"></div>
+                            <div class="vote" id="tc3">
+                                <span><input id="team-wh" type="radio" name="v" value="3" /></span>
+                                <span class="team-name">武汉队</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="p" id="pid" />
+                    <div class="clear"></div>
+                    <div class="center submit" onclick='submit()'>提交</div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src='./js/zepto.min.js'></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/fingerprint.js"></script>
+    <script>
+        var mySlider = new Swiper('.swiper-container', {
+            direction: 'vertical',
+            autoplay: 5000,
+            autoplayDisableOnInteraction: true,
+            preloadImages: true,
+            updateOnImagesReady: true,
+            loop: false,
+            onInit: function (swiper) {
+                swiper.stopAutoplay();
+            },
+            onImagesReady: function (swiper) {
+                document.getElementById('loading').style.display = "none";
+                swiper.startAutoplay();
+            },
+            onReachEnd: function (swiper) {
+                swiper.stopAutoplay();
+            }
+        });
+
+        for (var i=1; i<6; i++) {
+            document.getElementById("slider"+i).addEventListener("click", function(){
+                mySlider.slideNext();
+            });
+        }
+
+        document.getElementById("tc1").addEventListener("click", function(){
+            document.getElementById("team-bg").checked=true;
+        })
+
+        document.getElementById("tc2").addEventListener("click", function(){
+            document.getElementById("team-cd").checked=true;
+        })
+
+        document.getElementById("tc3").addEventListener("click", function(){
+            document.getElementById("team-wh").checked=true;
+        })
+
+        function submit(){
+            document.querySelector('form').submit();
+        }
+
+        var pid = new Fingerprint();
+        document.getElementById("pid").value = pid.get().toString();
+
+        var M = {};
+        M.audio = document.createElement('audio');
+        document.body.appendChild(M.audio);
+
+        M.audio.src='./music.mp3';
+        M.audio.play();
+        $("audio").attr("autoplay", "autoplay");
+        $("audio").attr("loop", "loop");
+
+        $(M.audio).on('pause',function () {
+            $('.bgsong').addClass('off')
+        }).on('playing',function () {
+            $('.bgsong').removeClass('off');
+        }).on('canplay',function () { //android2.3 不能直接播放  只能在canplay的时候 调用play()
+            M.audio.play();
+        });
+
+        $('.bgsong').on('touchstart', function (e) {
+            e.preventDefault();
+            if (/off/.test(this.className)) {
+                M.audio.play();
+                $('.bgsong').addClass('off')
+            }else {
+                M.audio.pause();
+                $('.bgsong').removeClass('off');
+            }
+            return false;
+        });
+
+    </script>
+    <script src='./js/ga.js'></script>
+</body>
+</html>

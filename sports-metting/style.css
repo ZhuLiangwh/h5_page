@@ -1,0 +1,168 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body {
+        position: relative;
+        height: 100%;
+    }
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+form {
+    display: block;
+    position: relative;
+    margin-top: 0em;
+    margin-bottom: 1em;
+}
+.loader { font-size: 90px; text-indent: -9999em; overflow: hidden; width: 1em; height: 1em; border-radius: 50%; margin: 0.8em auto; position: relative; -webkit-transform: translateZ(0); -ms-transform: translateZ(0); transform: translateZ(0); -webkit-animation: load6 1.7s infinite ease; animation: load6 1.7s infinite ease; }
+
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+}
+
+/*slider*/
+.slider{position:absolute;width:36px;height:36px;margin-left:-18px;left:50%;bottom: 45px; background-image:url(images/slider.png);background-size: 36px auto;z-index: 999; -webkit-animation: slide_up 2s infinite ease-out; z-index: 999;}
+
+/*loading*/
+.mod_loading{position:absolute;height:100%;left:0;top:0;width:100%;z-index:99999;background-color:#1e2c4d;display:-webkit-box;-webkit-box-align:center}
+.mod_loading .content{text-align:center;-webkit-box-flex:1;margin:0 80px}
+.mod_loading .content .progress{height:13px;padding:2px;-webkit-border-radius:17px;border-radius:17px;background-color:#b9ccd5}
+.mod_loading .content .progress span{display:block;height:13px;-webkit-border-radius:13px;border-radius:13px;background-color:#65cfd5}
+.mod_loading .content p{line-height:34px;color:#aaa}
+.mod_loading .progress_bg{-webkit-animation: loading 3s infinite linear;}
+
+#slide1, #slide2, #slide3, #slide4, #slide5, #slide6{
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+#slide1{
+    background-image: url(images/slide1-bg.jpg);
+}
+#slide2{
+    background-image: url(images/slide2-bg.jpg);
+}
+#slide3{
+    background-image: url(images/slide3-bg.jpg);
+}
+#slide4{
+    background-image: url(images/slide4-bg.jpg);
+}
+#slide5{
+    background-image: url(images/slide5-bg.jpg);
+}
+#slide6{
+    background-image: url(images/slide6-bg.jpg);
+}
+.placeholder{
+  width: 100%;
+  height: 30%;
+}
+.vote-form{
+    position: relative;
+/*    margin-top: 180px;*/
+    width: 100%;
+    color: #fff;
+}
+.team-button{
+    width: 33%;
+    float: left;
+}
+.team{
+    height: 20%;
+    position: relative;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+#team1{
+    background-image: url(images/team1.png);
+}
+#team2{
+    background-image: url(images/team2.png);
+}
+#team3{
+    background-image: url(images/team3.png);
+}
+.vote{
+    width: 60%;
+    margin: 0 auto;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+}
+.vote .team-name{
+    position: relative;
+    top: -3px;
+}
+#tc1{
+    background-color: #F27133;
+}
+#tc2{
+    background-color: #FE0100;
+}
+#tc3{
+    background-color: #0278A3;
+}
+.submit{
+    width: 120px;
+    margin: 0 auto;
+    background-color: #F4B32C;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 27%;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+.hidden{
+    display: none;
+}
+.clear{
+    clear: both;
+}
+
+@-webkit-keyframes load6 {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); box-shadow: 0 -0.83em 0 -0.4em #ffffff, 0 -0.83em 0 -0.42em #ffffff, 0 -0.83em 0 -0.44em #ffffff, 0 -0.83em 0 -0.46em #ffffff, 0 -0.83em 0 -0.477em #ffffff; }
+  5%,
+  95% { box-shadow: 0 -0.83em 0 -0.4em #ffffff, 0 -0.83em 0 -0.42em #ffffff, 0 -0.83em 0 -0.44em #ffffff, 0 -0.83em 0 -0.46em #ffffff, 0 -0.83em 0 -0.477em #ffffff; }
+  10%,
+  59% { box-shadow: 0 -0.83em 0 -0.4em #ffffff, -0.087em -0.825em 0 -0.42em #ffffff, -0.173em -0.812em 0 -0.44em #ffffff, -0.256em -0.789em 0 -0.46em #ffffff, -0.297em -0.775em 0 -0.477em #ffffff; }
+  20% { box-shadow: 0 -0.83em 0 -0.4em #ffffff, -0.338em -0.758em 0 -0.42em #ffffff, -0.555em -0.617em 0 -0.44em #ffffff, -0.671em -0.488em 0 -0.46em #ffffff, -0.749em -0.34em 0 -0.477em #ffffff; }
+  38% { box-shadow: 0 -0.83em 0 -0.4em #ffffff, -0.377em -0.74em 0 -0.42em #ffffff, -0.645em -0.522em 0 -0.44em #ffffff, -0.775em -0.297em 0 -0.46em #ffffff, -0.82em -0.09em 0 -0.477em #ffffff; }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); box-shadow: 0 -0.83em 0 -0.4em #ffffff, 0 -0.83em 0 -0.42em #ffffff, 0 -0.83em 0 -0.44em #ffffff, 0 -0.83em 0 -0.46em #ffffff, 0 -0.83em 0 -0.477em #ffffff; }
+}
+@keyframes load6 {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); box-shadow: 0 -0.83em 0 -0.4em #ffffff, 0 -0.83em 0 -0.42em #ffffff, 0 -0.83em 0 -0.44em #ffffff, 0 -0.83em 0 -0.46em #ffffff, 0 -0.83em 0 -0.477em #ffffff; }
+  5%,
+  95% { box-shadow: 0 -0.83em 0 -0.4em #ffffff, 0 -0.83em 0 -0.42em #ffffff, 0 -0.83em 0 -0.44em #ffffff, 0 -0.83em 0 -0.46em #ffffff, 0 -0.83em 0 -0.477em #ffffff; }
+  10%,
+  59% { box-shadow: 0 -0.83em 0 -0.4em #ffffff, -0.087em -0.825em 0 -0.42em #ffffff, -0.173em -0.812em 0 -0.44em #ffffff, -0.256em -0.789em 0 -0.46em #ffffff, -0.297em -0.775em 0 -0.477em #ffffff; }
+  20% { box-shadow: 0 -0.83em 0 -0.4em #ffffff, -0.338em -0.758em 0 -0.42em #ffffff, -0.555em -0.617em 0 -0.44em #ffffff, -0.671em -0.488em 0 -0.46em #ffffff, -0.749em -0.34em 0 -0.477em #ffffff; }
+  38% { box-shadow: 0 -0.83em 0 -0.4em #ffffff, -0.377em -0.74em 0 -0.42em #ffffff, -0.645em -0.522em 0 -0.44em #ffffff, -0.775em -0.297em 0 -0.46em #ffffff, -0.82em -0.09em 0 -0.477em #ffffff; }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); box-shadow: 0 -0.83em 0 -0.4em #ffffff, 0 -0.83em 0 -0.42em #ffffff, 0 -0.83em 0 -0.44em #ffffff, 0 -0.83em 0 -0.46em #ffffff, 0 -0.83em 0 -0.477em #ffffff; }
+}
+@-webkit-keyframes slide_up {
+    0%,20%{opacity: 0;-webkit-transform: translate3d(0,10px,0);}
+    80% {opacity: 1;-webkit-transform: translate3d(0,0,0);}
+    100% {opacity: 0;-webkit-transform: translate3d(0,-8px,0);}
+}
+
+/*input radio button*/
+
+
+/*music*/
+.icon_sound{position:absolute;z-index:10;top:10px;right:10px;width:26px;height:26px;line-height:999px;overflow:hidden;border-radius:999px;border:solid 2px #fff}
+.icon_sound:before,.icon_sound.off:after{content:'';background:url(images/sprite.png?max_age=2592000) no-repeat;background-size:30px 250px}
+.icon_sound:before{display:block;width:13px;height:11px;margin:7px auto 0;background-position:0 -30px}
+.icon_sound.off:after{position:absolute;top:6px;left:6px;width:14px;height:14px;background-position:0 -60px}

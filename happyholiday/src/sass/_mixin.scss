@@ -1,0 +1,41 @@
+@mixin clearfix{
+  &::after {
+    display: block;
+    clear:both;
+    content: '';
+    font-size: 0;
+  }
+}
+
+@mixin dis-ilb {
+  display: inline-block;
+  vertical-align: top;
+}
+
+@mixin fill {
+  display: block;
+  width: 100%;
+}
+
+@mixin font-dpr($size:$globalFontSize){
+  font-size:$size / 2 +px;
+  [data-dpr="2"] &{
+    font-size: $size + px;
+  };
+  [data-dpr="3"] &{
+    font-size: $size * 1.5 + px;
+  };
+}
+
+@mixin center($scale:1){
+  -webkit-transform:translate(-50%,-50%) scale($scale / 2);
+  -webkit-animation:gift1 0.5s ease-in-out;
+  [data-dpr="2"] &{
+    -webkit-transform:translate(-50%,-50%) scale($scale);
+    -webkit-animation:gift2 0.5s ease-in-out;
+  };
+  [data-dpr="3"] &{
+    -webkit-transform:translate(-50%,-50%) scale($scale * 1.5);
+    -webkit-animation:gift3 0.5s ease-in-out;
+  };
+}

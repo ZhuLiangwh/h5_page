@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>謹賀新年</title>
+    <meta charset="utf-8" />
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-41891749-11', 'auto');
+      ga('send', 'pageview');
+    </script>
+</head>
+<body>
+<div class="wrap">
+    <div class="page3">
+       <div class="photo">
+            <div class="pic"><img src="img/2.jpg"></div>
+            <img class="picCover" src="img/cover1.png">
+        </div>
+        <!-- <div class="txtlink"><a id="J-gotomake" href="http://dolphin.com/happy-new-year/jp/">一緒に写真年賀状を作りましょう</a></div> -->
+        <div class="txtlink"><a id="J-gotomake" href="http://172.18.7.20:8006/build/">一緒に写真年賀状を作りましょう</a></div>
+    </div>
+</div>
+<script src="js/bundle.js"></script>
+<script>
+  var gotomake = document.getElementById('J-gotomake');
+      gotomake.addEventListener('click',function(){
+        ga('send', 'event', 'new_year_h5', 'click','go_to_make');
+      });
+</script>
+</body>
+</html>

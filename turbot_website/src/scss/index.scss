@@ -1,0 +1,498 @@
+// Import Bootstrap for Sass
+@import "bootstrap";
+
+.fr{
+  float:right;
+}
+
+.container{
+  text-align: center;
+}
+
+.banner1{
+  background:#2c668c url(../img/bg1.jpg) no-repeat center top;
+  color:#fff;
+  .container{
+    padding-bottom: 20px;
+    .navbar{
+      text-align:left;
+      border-bottom: 1px solid #fff;
+      overflow: hidden;
+
+      h1{
+        color:#fff;
+        letter-spacing:5px;
+      }
+      a {
+        color:#fff;
+        margin-top: 2.5em;
+        text-decoration: underline;
+      }
+    }
+    img{
+      margin-top: 20px;
+      max-width:100%;
+    }
+    h3{
+      font-weight: bold;
+      font-size: 36px;
+    }
+    .p1{
+      font-size: 14px;
+    }
+    h4{
+      font-weight: bold;
+      margin-top: 20px;
+      font-size: 24px;
+    }
+    .p2{
+      font-size: 12px;
+    }
+  } 
+
+}
+
+.banner2{
+  .container{
+    padding-top:10%;
+    padding-bottom: 5%;
+    img{
+      max-width:50%;
+    }
+    p{
+      font-size: 13px;
+      color:#444;
+    }
+  }
+}
+
+.banner3{
+  background:#4da8a6 url(../img/map2.png) no-repeat center top;
+  color:#fff;
+  .container{
+     padding-top:10%;
+     padding-bottom: 5%;
+     img{
+      max-width:50%;
+    }
+    h3{
+      font-size: 36px;
+      span{
+        font-weight: bold;
+        font-size: 50px;
+      }
+    }
+    p{
+      font-size: 18px;
+    }
+  }
+}
+
+.banner4{
+  color:#444;
+  .container{
+      padding-top:10%;
+      padding-bottom: 5%;
+    img{
+      max-width:100%;
+    }
+    p{
+      color:#444;
+    }
+
+  }
+}
+
+.banner5{
+  background: url(../img/bg3.jpg) no-repeat center top;
+  color:#fff;
+  .container{
+     padding-top:10%;
+     padding-bottom: 5%;
+     img{
+      max-width:100%;
+    }
+    h3{
+      span{
+        font-size: 36px;
+      }
+    }
+  } 
+}
+
+.banner6{
+  text-align: center;
+  .container{
+    padding-top:15%;
+    padding-bottom: 10%;
+    .icon_contact{
+      background: url(../img/mail.png) no-repeat 0 0;
+      background-size: 32px 32px;
+      padding-left: 40px;
+      margin-bottom: 1em;
+      line-height:1.7em;
+      font-size: 1.5em;
+      color:#434343;
+      font-weight: bold;
+      display: inline-block;
+    }
+    .mail{
+      font-size: 1.5em;
+      a{
+        text-decoration: underline;
+        color:#434343;
+      }
+    }
+  }
+}
+
+.footer{
+  background: #626262;
+  text-align: center;
+  color:#fff;
+  .container{
+     padding-top: 10%;
+     padding-bottom: 5%;
+    .d_log{
+      width:50%;
+    }
+    .footer_des{
+      font-size: 1em;
+    }
+    .footer_logo{
+      margin-top:2em;
+      padding: 0 15px;
+      span{
+        img{
+          max-width:100%;
+        }
+    
+      }
+    }
+    .footer_bot{
+      color:#c6c6c6;
+      padding-top: 2em;
+      font-size: 1em;
+      span{
+        border-top:1px solid #8b8b8b;
+        padding-top: 1em;
+        margin-top: 0.8em;
+        font-size: 0.5em;
+        display:block;
+      }
+    }
+  }
+}
+
+@media (min-width:400px) and (max-width:992px) {
+  .banner1 {
+    .container{
+      padding-bottom: 5%;
+      .txt{
+        :after{
+          clear:both;
+        }
+        h3{
+          font-size: 58px;
+        }
+        .p1{
+          font-size: 20px;
+        }
+        h4{
+          padding-top: 20px;
+          font-size: 33px;
+        }
+        .p2{
+          font-size: 17px;
+        }
+
+      }
+    }  
+  }    
+
+  .banner2{
+    .container{
+      .txt{
+        h3{
+          margin-top: 10%;
+          font-size: 33px;
+        }
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .banner3{
+    .container{
+ 
+      .txt{
+        h3{
+          font-size: 50px;
+          span{
+            font-size:70px;
+            padding-right: 5px;
+          }
+        }
+        p{
+          font-size:25px;
+        }
+      }
+    }
+  }
+
+  .banner4{
+    .container{
+      img{
+        max-width:100%;
+      }
+      .txt{
+        h3{
+          font-size: 33px;
+        }
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  .banner5{
+    .container{
+     img{
+      max-width:100%;
+     }
+      .txt{
+        h3{
+          font-size: 40px;
+          span{
+            font-size: 55px;
+          }
+        }
+      }
+    }
+  }
+  
+  .banner6{
+    .container{
+      padding-bottom:10%;
+      padding-top: 10%;
+      .icon_contact{
+        font-size: 40px;
+        background-size: 50px 50px;
+        padding-left: 70px;
+      }
+      .mail{
+        font-size: 24px;
+      }
+    }
+  }
+
+  .footer{
+    .container{
+      .footer_des{
+        font-size: 18px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+      }
+      .footer_bot{
+        font-size: 14px;
+        
+      }
+    }
+  }
+}
+
+
+@media (min-width: 992px) {
+  .banner1 {
+      background-size: cover;
+      .container{
+        padding-bottom: 5%;
+        text-align: left;
+        .navbar{
+          padding: 20px 0;
+            h1{
+              font-size: 36px;
+            }
+            a {
+              margin-top: 25px;
+              font-size: 30px;
+            }
+        }
+        .img{
+          float:right;
+          padding-top:92px;
+          text-align: right;
+          display:block;
+          img{
+            max-width:100%;
+          }
+        }
+        .txt{
+          padding-top: 120px;
+          :after{
+            clear:both;
+          }
+          h3{
+            font-size: 60px;
+          }
+          .p1{
+            font-size: 22px;
+          }
+          h4{
+            margin-top: 20px;
+            font-size: 44px;
+          }
+          .p2{
+            font-size: 22px;
+          }
+
+        }
+      }  
+  }
+
+  .banner2{
+    color:#444;
+    .container{
+      padding:150px 0;
+      img{
+         max-width:277px;
+      }
+      .txt{
+        text-align: right;
+        h3{
+          font-size: 55px;
+          margin-top:0;
+        }
+        p{
+          font-size: 32px;
+        }
+      }
+    }
+  }
+
+  .banner3{
+    background-size: cover;
+    .container{
+      padding-top: 150px;
+      text-align: left;
+      .img{
+        float:right;
+        text-align: right;
+        display: block;
+        img{
+          max-width: 405px;
+        }
+      }
+      .txt{
+        padding-top: 70px;
+        h3{
+          font-size: 72px;
+          span{
+            font-weight: normal;
+            font-size:100px;
+          }
+        }
+        p{
+          font-size:36px;
+        }
+      }
+    }
+  }
+  .banner4{
+    .container{
+      padding:0;
+      position: relative;
+      overflow: hidden;
+      text-align: left;
+      .img{
+        position:absolute;
+        left:128px;
+        top:95px;
+        img{
+          width:auto;
+        }
+      }
+      .txt{
+        padding-top: 180px;
+        padding-bottom:55px;
+        float: right;
+        text-align: right;
+        h3{
+          font-size: 55px;
+        }
+        p{
+          font-size: 32px;
+        }
+      }
+    }
+  }
+
+  .banner5{
+    background-size: cover;
+    overflow: hidden;
+    .container{
+      text-align: left;
+      padding-top: 150px;
+      padding-bottom: 150px;
+      .img{
+        float: right;
+        img{
+          width:auto;
+        }
+      }
+      .txt{
+        padding-top: 3%;
+        h3{
+          font-size: 60px;
+          span{
+            font-size: 85px;
+          }
+        }
+      }
+    }
+  }
+
+  .banner6{
+    .container{
+      padding-top: 140px;
+      padding-bottom: 140px;
+      .icon_contact{
+        background-size:auto auto;
+        font-size: 60px;
+        padding-left: 100px;
+        font-weight: normal;
+      }
+      .mail{
+        font-size: 36px;
+      }
+    }
+  }
+
+  .footer{
+    .container{
+      padding: 60px 0 74px;
+      .d_log{
+        width:auto;
+      }
+      .footer_des{
+        margin-top:50px;
+        font-size: 32px;
+      }
+      .footer_logo{
+        margin-top: 97px;
+        padding: 0 20%;
+      }
+      .footer_bot{
+        font-size: 22px;
+        span{
+          font-size: 14px;
+        }
+      }
+
+    }
+  }
+}
+

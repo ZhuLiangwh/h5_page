@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>謹賀新年</title>
+	<meta charset="utf-8" />
+	<meta id="ShareUrl1" property="og:url" content="shareurl" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="謹賀新年" />
+	<meta property="og:description" content="友達から年賀状が届きました！開けてみましょう！" />
+	<meta property="og:image" content="img/icon.png" />
+	<style>
+	#loading{
+		background-color: #fc7e89;
+		height: 100%;
+		width: 100%;
+		position: fixed;
+		z-index: 1;
+		margin-top: 0px;
+		top: 0px;
+	}
+	#loading-center{
+		width: 100%;
+		height: 100%;
+		position: relative;
+		}
+	#loading-center-absolute {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		height: 200px;
+		width: 200px;
+		margin-top: -100px;
+		margin-left: -100px;
+		-ms-transform: rotate(-135deg); 
+			-webkit-transform: rotate(-135deg); 
+			transform: rotate(-135deg);
+	}
+	.object{
+
+		-moz-border-radius: 50% 50% 50% 50%;
+		-webkit-border-radius: 50% 50% 50% 50%;
+		border-radius: 50% 50% 50% 50%;
+		position: absolute;
+		border-top: 5px solid #FFF;
+		border-bottom: 5px solid transparent;
+		border-left:  5px solid #FFF;
+		border-right: 5px solid transparent;
+		
+		-webkit-animation: animate 2s infinite;
+		animation: animate 2s infinite; 
+
+		}
+	#object_one{
+		left: 75px;
+		top: 75px;
+		width: 50px;
+		height: 50px;
+		}
+								
+	#object_two{
+		left: 65px;
+		top: 65px;
+		width: 70px;
+		height: 70px;
+		-webkit-animation-delay: 0.2s;
+			animation-delay: 0.2s;
+		}
+			
+	#object_three{
+		left: 55px;
+		top: 55px;
+		width: 90px;
+		height: 90px;
+		-webkit-animation-delay: 0.4s;
+			animation-delay: 0.4s;
+		}
+	#object_four{
+		left: 45px;
+		top: 45px;
+		width: 110px;
+		height: 110px;
+		-webkit-animation-delay: 0.6s;
+			animation-delay: 0.6s;
+		
+		} 
+
+	@-webkit-keyframes animate {
+	 
+
+	50% {
+
+		-ms-transform: rotate(360deg) scale(0.8); 
+			-webkit-transform: rotate(360deg) scale(0.8); 
+			transform: rotate(360deg) scale(0.8); 
+		}
+	}
+
+	@keyframes animate {
+		
+	50% {
+
+		-ms-transform: rotate(360deg) scale(0.8); 
+			-webkit-transform: rotate(360deg) scale(0.8); 
+			transform: rotate(360deg) scale(0.8); 
+		} 
+	}
+	</style>
+	<link type="text/css" rel="stylesheet" href="css/index.css"/>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-41891749-11', 'auto');
+		ga('send', 'pageview');
+	</script>
+</head>
+<body>
+<div id="loading">
+	<div id="loading-center">
+		<div id="loading-center-absolute">
+			<div class="object" id="object_four"></div>
+			<div class="object" id="object_three"></div>
+			<div class="object" id="object_two"></div>
+			<div class="object" id="object_one"></div>
+		</div>
+	</div>
+</div>
+<div class="wrap dis_none">
+	<div class="page" id="J-picTpl">
+		<h3>年賀状2<img src="img/flower.png" alt="">16</h3>
+		<h4>デザインを選ぶ</h4>
+		<div class="rollList">
+			<ul>
+				<li><a data-tmpid="tmp1" data-url="img/model1.png"><img src="img/model1.png"></a></li>
+				<li><a data-tmpid="tmp2" data-url="img/model2.png"><img src="img/model2.png"></a></li>
+				<li><a data-tmpid="tmp3" data-url="img/model3.png"><img src="img/model3.png"></a></li>
+				<li><a data-tmpid="tmp4" data-url="img/model4.png"><img src="img/model4.png"></a></li>
+			</ul>
+	    </div>   
+	</div>
+	<div class="page2 dis_none" id="J-picUpload">
+     		<div class="tmpl" id="J-tmpl">
+			<img id="J-picCover" class="picCover">
+			<ul class="txt_wrap J-popUp" id="J-txtwrap">
+				<li>コメントを入力できます</li>
+			</ul>	
+		</div>
+		<div class="btn" id="J-btn">
+			<button id="J-submit" class="button" disabled>編集完成</button>
+			<button class="J-reset button active">デザイン変更</button>
+		</div>
+		<div class="btn dis_none" id="J-btn2">
+			<a class="button active" id="J-like"><img src="img/like.png" alt=""> いいね</a>
+			<a class="button active" id="J-share">シェア</a>
+		</div>
+		<div class="txtlink dis_none J-reset"><a>一覧に戻る</a></div>
+	</div>
+	<div id="J-share-box" class="share-box dis_none">
+		<div class="share-content">
+			<div class="share-hd">
+					<em id="J-share-close"></em>
+					<h2>Share</h2>
+			</div>
+			<div class="share-bd">
+				<ul>
+					<li><a id="ShareUrl2" href="https://www.facebook.com/sharer/sharer.php?u=shareurl&t=友達から年賀状が届きました！開けてみましょう！" target="_blank"><img src="img/facebook.png" alt="">Facebook</a></li>
+					<li><a id="ShareUrl3" href="https://twitter.com/intent/tweet?url=shareurl&text=友達から年賀状が届きました！開けてみましょう！" target="_blank"><img src="img/Tiwtter.png" alt="">Twitter</a></li>
+					<li><a id="ShareUrl4" href="https://plus.google.com/share?url=shareurl"><img src="img/Google+.png" alt="">Google+</a></li>
+					<li><a id="ShareUrl5" href="http://line.naver.jp/R/msg/text/?友達から年賀状が届きました！開けてみましょう！ shareurl" target="_blank"><img src="img/Line.png" alt="">LINE</a></li>
+					<!-- <li><a id="ShareUrl5" href="" target="_blank"><img src="img/talk.png" alt="">Talk</a></li> -->
+					<li><a id="ShareUrl6" href="mailto:?subject=謹賀新年&body=友達から年賀状が届きました！開けてみましょう！ shareurl"><img src="img/mail.png" alt="">Mail</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="download dis_none" id="J-download">
+		<a href="#" class="btn-download" id="J-download-btn" target="_blank"></a>
+		<img src="img/dolphin_icon.png" alt="">
+		<p>
+			<strong>ドルフィンブラウザ</strong>
+			<span>世界で1億5千万人が使うブラウザ</span>
+		</p>
+	</div>
+</div>
+	<script src="js/bundle.js"></script>
+</body>
+</html>

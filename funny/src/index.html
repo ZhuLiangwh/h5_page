@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Юмор</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,user-scalable=no" />
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+    <div class="warp">
+        <header class="topBar">
+            <!-- <i onclick="window.history.go(-1)" class="btn_back"></i> -->
+            <span class="tit">Юмор</span>
+        </header>
+        <nav class="tabTit" id="tabTit">
+            <ul>
+                <li class="cur" data-type="text" data-tplid="textTmpl">Анекдоты</li>
+                <li data-type="picture" data-tplid="pictureTmpl">Прикол</li>
+                <li data-type="video" data-tplid="videoTmpl">COUB</li>
+                
+            </ul>
+        </nav>
+        <section class="tabContents">
+            <div id="tabcontent"><p class="preload">Loading...</p></div>
+            <div class="load_more hide">Slide up to load more</div>
+        </section>
+        <!-- <button id="ScrollToTop" class="topButton Offscreen" type="button">Back to top</button> -->
+    </div>  
+    
+      
+    <!-- 引用模板 -->
+    <script type="text/tmpl" id="textTmpl">
+        <ul class="text_cont">
+            <% for(var i = 0,len=funnys.length;i<len;i++){ %>
+                <li>
+                    <p class="text"><%= funnys[i].content.replace(/\n/g,'<br>') %></p>
+                    <span class="author"><%= funnys[i].author %></span>
+                </li>
+            <%}%>
+        </ul>
+    </script>
+    <!-- 引用模板 -->
+    <script type="text/tmpl" id="videoTmpl">
+        <ul class="video_cont">
+            <% for(var i = 0,len=funnys.length;i<len;i++){ %>
+                <li>
+                    <video preload="load" class="video_play" controls="controls" poster=<%= funnys[i].imageUrl %> >
+                        <source src=<%= funnys[i].content %> type='video/mp4' />
+                    </video>
+                    <div class="video_text_wrap">
+                        <p class="video_tit"><%= funnys[i].title %></p>
+                        <p class="video_text"><%= funnys[i].view_count %> views<br><%= funnys[i].published_at %><span class="mlr_8">|</span><%= funnys[i].author %></p>
+                        <p class="video_likes"><i></i><span><%= funnys[i].likes_count %></span></p>
+                    </div>
+                </li>
+            <%}%>
+        </ul>
+    </script>
+    
+    <!-- 引用模板 -->
+    <script type="text/tmpl" id="pictureTmpl">
+        <ul class="picture_cont">
+            <% for(var i = 0,len=funnys.length;i<len;i++){ %>
+                <li>
+                    <p class="pic_tit"><%= funnys[i].title %></p>
+                    <p class="pic_cont"><%= funnys[i].content %></p>
+                    <p><img src=<%= funnys[i].imageUrl %>  class="pic"></p>
+                </li>
+            <%}%>
+        </ul>
+    </script>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65014140-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+</body>
+</html>
