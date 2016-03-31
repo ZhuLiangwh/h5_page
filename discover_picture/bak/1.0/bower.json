@@ -1,0 +1,26 @@
+{
+  "name": "discover_picture",
+  "main": "index.js",
+  "version": "1.0.0",
+  "authors": [
+    "Junhui Zhang <jhzhang@bainainfo.com>"
+  ],
+  "description": "discover picture",
+  "keywords": [
+    "dolphin",
+    "discover",
+    "pictrue"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "swipebox": "~1.4.1"
+  }
+}

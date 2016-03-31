@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>КАРТИНКИ</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,user-scalable=no" />
+    <style type="text/css">
+       .lazybox{background:#ebebeb url(img/dolphin.png) no-repeat center;background-size: 100% auto;}
+       .lazy {max-width:100%;min-height:133px;display: block; background:#ebebeb url(img/dolphin.png) no-repeat center;background-size: 100% auto;}
+       .loading {display: none;position: absolute; top: 50%; left: 50%; z-index: 9;margin-top: -25px;background: url(img/loading.gif) no-repeat 0 center; -webkit-background-size:25px auto;margin-left: -13px;width: 32px;height: 32px;}
+    </style>
+    <link type="text/css" rel="stylesheet" href="css/index.css"/>
+</head>
+<body>
+<div id="wrap" class="ov_h100">
+    <div id="J_page" class="ov_h100">
+        <div id="J_page_main" class="ov_h100">
+            <div class="page_hd"><i class="arrow"></i>КАРТИНКИ</div>
+            <div id="J_tab" class="h_tab">
+                <div id="J_tab_hd" class="tab_hd">
+                    <ul>
+                        <li><a href="#recommend">Песочница</a></li>
+                        <li><a href="#category">Категории</a></li>
+                        <li><a href="#picture">Коллекции</a></li>
+                    </ul>
+                </div>
+                <div id="J_tab_bd" class="h_tab_bd">
+                    <div id="J_tab_con_recommend" class="ov_a100"><p class="preload">Loading...</p></div>
+                    <div id="J_tab_con_category" class="ov_a100"><p class="preload">Loading...</p></div>
+                    <div id="J_tab_con_picture" class="ov_a100"><p class="preload">Loading...</p></div>
+                </div>
+            </div>
+        </div>
+        <div id="J_page_recommend_list"></div>
+        <div id="J_page_category_detail" class="ov_a100"><p class="preload">Loading...</p></div>
+        <div id="J_page_picture_detail" class="ov_a100"><p class="preload">Loading...</p></div>
+        <div class="loading" id="loading"></div>
+        <a class="backtop" id="J_backtop"></a>
+    </div>
+</div>
+<script type="text/tmpl" id="recommend_tpl">
+    <ul class="picture_detail clearfix">
+        <% for(var i = 0,len=items.length;i<len;i++){ %>
+            <li>
+                <a data-id="<%= items[i].id %>" href="<%= items[i].imageUrl %>" rel="<%= items[i].detailUrl %>" data-name="<%= items[i].name %>" data-title="<%= items[i].cateId %>" class="swipebox lazybox">
+                    <img class="lazy" src="<%=items[i].imageUrl%>" alt=""/>
+                </a>
+            </li>
+        <%}%>
+    </ul>
+</script>
+<script type="text/tmpl" id="picture_tpl">
+    <ul class="picture_list clearfix">
+        <% for(var i = 0,len=items.length;i<len;i++){ %>
+            <li>
+                <a class="lazy" href="#picture_detail_<%=items[i].id%>" data-id="<%=items[i].id%>">
+                    <img class="lazy" src="<%=items[i].imageUrl%>" alt=""/>
+                    <h4 class="list_tit"><%=items[i].name%></h4>
+                    <p class="list_cont"><%=items[i].description%></p>
+                </a>
+            </li>
+        <%}%>
+    </ul>
+</script>
+<script type="text/tmpl" id="picture_detail_tpl">
+    <div class="page_title"><i class="btn_back" onClick="history.back()"></i><%=name%></div>
+    <div class="picture_detail_hd">
+        <img class="lazy" src="<%=imageUrl%>" alt="">
+        <h4 class="list_tit"><%=name%></h4>
+        <p class="list_cont"><%=description%></p>
+    </div>
+    <ul class="picture_detail clearfix">
+        <% for(var i = 0,len=items.length;i<len;i++){ %>
+            <li>
+               <a data-id="<%= items[i].id %>" href="<%= items[i].imageUrl %>" rel="<%= items[i].detailUrl %>" data-name="<%= items[i].name %>" data-title="<%= items[i].cateId %>" class="swipebox lazybox">
+                    <img class="lazy" src="<%=items[i].imageUrl%>" alt=""/>
+                </a>
+            </li>
+        <%}%>
+    </ul>
+</script>
+<script type="text/tmpl" id="category_tpl">
+    <ul class="category_list clearfix">
+        <% for(var i = 0,len=items.length;i<len;i++){ %>
+            <li>
+                <a href="#category_detail_<%=items[i].id%>" data-id="<%=items[i].id%>" class="lazybox">
+                    <img class="lazy" src="<%=items[i].imageUrl%>" alt=""/>
+                    <span><%= items[i].name%></span>
+                </a>
+            </li>
+        <%}%>
+    </ul>
+</script>
+<script type="text/tmpl" id="category_detail_tpl">
+    <div>
+        <div class="page_title"><i class="btn_back" onClick="history.back()"></i><%=name%></div>
+        <ul class="picture_detail clearfix">
+            <% for(var i = 0,len=items.length;i<len;i++){ %>
+                <li>
+                    <a data-id="<%= items[i].id %>" href="<%= items[i].imageUrl %>" rel="<%= items[i].detailUrl %>" data-name="<%= items[i].name %>" data-title="<%= items[i].cateId %>" class="swipebox lazy">
+                        <img class="lazy" src="<%=items[i].imageUrl%>" alt=""/>
+                    </a>
+                </li>
+            <%}%>
+        </ul>
+    </div>
+</script>
+<script src="js/zepto.min.js"></script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-65014140-2', 'auto');
+  ga('send', 'pageview');
+</script>
+<script src="js/index.js"></script>
+</body>
+</html>
